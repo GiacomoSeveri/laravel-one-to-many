@@ -17,7 +17,16 @@
                     <label for="slug" class="form-label">Titolo</label>
                     <input type="text" class="form-control" id="slug" disabled value="{{old('title', $project->title)}}">
                 </div>
-                <div class="mb-3 col-12">
+                <div class="mb-3 col-3">
+                    <label for="category_id" class="form-label">Categoria</label>
+                    <select class="form-select" id="category_id" name="category_id">
+                        <option value="">Nessuna categoria</option>
+                        @foreach($categories as $category)
+                        <option @if($project->category_id == $category->id) selected @endif value="{{$category->id}}">{{$category->label}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3 col-9">
                     <label for="image" class="form-label">Immagine</label>
                     <input type="file" class="form-control" id="image" name="image">
                 </div>
