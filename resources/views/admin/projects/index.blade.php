@@ -12,7 +12,7 @@
                     <h5 class="m-0">{{ $project->title }}</h5>
                     <a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-sm btn-primary-custom text-light">Vedi</a>
                 </div>
-                <img src="{{ $project->image }}" width="300">
+                <img src="{{ asset('storage/' . $project->image) }}" width="300">
             </div>
             @endforeach
         </div>

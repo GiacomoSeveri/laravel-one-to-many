@@ -33,7 +33,7 @@
                     <ul>
                         <h6>Categoria</h6>
                         {{-- @foreach($categories as $category) --}}
-                        <li>{{ $project->$category?->label }}</li>
+                        <li>{{ $project->category?->label }}</li>
                         {{-- @endforeach --}}
                     </ul>
                 </div>
